@@ -1,0 +1,358 @@
+
+.nano {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.nano-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+.nano-content:focus {
+    outline: thin dotted
+}
+
+.nano-content::-webkit-scrollbar {
+    display: none
+}
+
+.nano-pane {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    width: 10px;
+    // opacity: .01;
+    // -webkit-transition: opacity .2s;
+    // -moz-transition: opacity .2s;
+    // -ms-transition: opacity .2s;
+    // transition: opacity .2s
+}
+
+.nano-slider {
+    position: relative
+}
+
+.nano-slider:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 2px;
+    height: 100%;
+    background: rgba(0,0,0,.16)
+}
+
+.has-scrollbar>.nano-content::-webkit-scrollbar {
+    display: block
+}
+
+.nano-pane.active,.nano-pane.flashed,.nano:hover>.nano-pane {
+    visibility: visible;
+    opacity: .99
+}
+
+
+.quickSearch_v1 {
+    position: relative;
+    width: 33px;
+    height: 50px
+}
+
+.quickSearch_v1 .container {
+    width: 100%
+}
+
+.quickSearch_v1 .form-control {
+    position: relative;
+    z-index: 1;
+    height: 50px;
+    margin: 0;
+    padding: 15px 45px;
+    border: 0;
+    border-radius: 0;
+    background: transparent none;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+    transition: background-color .2s
+}
+
+.quickSearch_v1 .form-control:focus {
+    z-index: 2;
+    box-shadow: none;
+    border-color: #666
+}
+
+.quickSearch_v1 .form-reset,.quickSearch_v1 .form-submit {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 50px;
+    border: 0;
+    background: transparent none
+}
+
+.quickSearch_v1 .form-reset .svgicon,.quickSearch_v1 .form-submit .svgicon {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+
+.quickSearch_v1 .form-reset {
+    right: 0;
+    opacity: 0
+}
+
+.quickSearch_v1 .form-reset .svgicon-search-close {
+    margin-top: -6px;
+    margin-left: -11px;
+    fill: #a6a6a6;
+    font-size: 12px
+}
+
+.quickSearch_v1 .form-submit {
+    z-index: 1;
+    left: 0
+}
+
+.quickSearch_v1 .form-submit .svgicon-search-quick {
+    margin-top: -7px;
+    margin-left: -9px;
+    fill: #fff;
+    font-size: 14px;
+    -webkit-transition: fill .2s;
+    -moz-transition: fill .2s;
+    -ms-transition: fill .2s;
+    transition: fill .2s
+}
+
+.quickSearch_v1 .form-submit:hover .svgicon-search-quick {
+    fill: #f30;
+    -webkit-transition: fill .2s;
+    -moz-transition: fill .2s;
+    -ms-transition: fill .2s;
+    transition: fill .2s
+}
+
+.quickSearch_v1 .dropdown-menu {
+    right: 0;
+    left: auto;
+    width: 360px
+}
+
+.quickSearch_v1 .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 41px;
+    -webkit-transition: width .2s;
+    -moz-transition: width .2s;
+    -ms-transition: width .2s;
+    transition: width .2s
+}
+
+.quickSearch_v1 .search .nano-pane {
+    margin: 5px 0
+}
+
+.quickSearch_v1 .search.focus {
+    width: 270px
+}
+
+.quickSearch_v1 .search.focus .form-control {
+    background-color: #fff
+}
+
+.quickSearch_v1 .search.focus .form-reset,.quickSearch_v1 .search.focus .form-submit {
+    z-index: 2
+}
+
+.quickSearch_v1 .search.focus .form-reset {
+    opacity: 1
+}
+
+.quickSearch_v1 .search.focus .form-submit .svgicon-search-quick {
+    fill: #333
+}
+
+.quickSearch_v1 .search-form {
+    position: relative;
+    overflow: hidden
+}
+
+.quickSearch_v1 .search-menu {
+    padding-bottom: 50px
+}
+
+.quickSearch_v1 .search-menu .nano-pane {
+    margin: 5px 0
+}
+
+.quickSearch_v1 .search-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ebebeb
+}
+
+.quickSearch_v1 .search-more a {
+    display: block;
+    height: 20px;
+    padding: 15px 20px 14px;
+    font-family: PF DinDisplay;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: content-box
+}
+
+.quickSearch_v1 .search-results {
+    min-height: 70px;
+    max-height: 360px
+}
+
+.quickSearch_v1 .search-results .widget-header {
+    display: none
+}
+
+.quickSearch_v1 .search-results .card {
+    box-sizing: border-box;
+    display: table;
+    width: 100%!important;
+    margin: 0;
+    padding: 10px 20px 10px 15px
+}
+
+.quickSearch_v1 .search-results .card .thumb {
+    background: #d9d9d9
+}
+
+.quickSearch_v1 .search-results .card .card-content,.quickSearch_v1 .search-results .card .thumbnail {
+    display: table-cell
+}
+
+.quickSearch_v1 .search-results .card .card-content {
+    vertical-align: middle;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 15px;
+    text-align: left
+}
+
+.quickSearch_v1 .search-results .card .video-title {
+    width: 270px;
+    height: 18px;
+    margin: 0
+}
+
+.quickSearch_v1 .search-results .card .video-title a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.quickSearch_v1 .search-results .card .video-info {
+    margin-bottom: 0
+}
+
+.quickSearch_v1 .search-results-title {
+    padding: 18px 14px 8px;
+    color: #a6a6a6;
+    font-size: 14px;
+    line-height: 17px
+}
+.dropdown-menu {
+    min-width: 400px;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    float: left;
+    opacity: 1;
+    visibility: visible;
+    overflow-y: scroll;
+    margin: 0;
+    background-color: #fff;
+    text-align: left;
+    transition: opacity .2s,visibility .2s;
+    z-index: 999;
+    // padding: 15px 0 15px 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 2px #0000001a;
+    max-height: 314px;
+}
+
+.dropdown-menu--right {
+    right: 0;
+    left: auto
+}
+
+.dropdown-menu--left {
+    right: auto;
+    left: 0
+}
+
+.pull-right .dropdown-menu {
+    right: 0;
+    left: auto
+}
+
+.dropdown-arrows {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin: -4px 0 0;
+    width: 9px;
+    height: 9px
+}
+
+
+
+
+
+
+// Custom 
+
+.quickSearch-wrap {
+    position: relative;
+}
+
+.card  {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px 10px 15px !important;
+}
+
+.thumb {
+    width: 60px;
+}
+
+.card-content.video-content {
+    color: #333;
+}
+
+.card-content.video-content .video-title{
+    font-size: 16px;
+    color: #333;
+}
+
+.video-year, .video-country {
+    opacity: 1;
+}
